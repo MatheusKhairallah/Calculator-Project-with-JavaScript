@@ -4,6 +4,8 @@ class CalcController {
 
         /*O comando "this" referencia atributos e métodos. 
         Sendo atributos - váriaveis, e métodos - funções*/
+
+        //"querySelector" seleciona/procura uma tag ou id dentro do documento
         this._locale = "pt-BR";
         this._displayCalcEl = document.querySelector("#display");
         this._dateEl = document.querySelector("#data");
@@ -22,6 +24,12 @@ class CalcController {
             this.setDisplayDateTime();
 
         }, 1000);
+
+    }
+
+    initButtonsEvents() {
+
+        let buttons = document.querySelectorAll("#buttons > g, #parts > g");
 
     }
 
