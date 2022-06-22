@@ -89,6 +89,8 @@ class CalcController {
 
         this._operation = [result, last];
 
+        this.setLastNumberToDisplay();
+
     }
 
     setLastNumberToDisplay() {
