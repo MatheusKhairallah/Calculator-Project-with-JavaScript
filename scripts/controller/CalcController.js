@@ -83,14 +83,22 @@ class CalcController {
 
             } else {
 
-            this._operation.push(value);
+                this._operation.push(value);
 
             }
 
         } else {
 
-            let newValue = this.getLastOperation().toString() + value.toString();
-            this.setLastOperation(parseInt(newValue));
+            if (this.isOperator(value)) {
+
+                this._operation.push(value);
+
+            } else {
+
+                let newValue = this.getLastOperation().toString() + value.toString();
+                this.setLastOperation(parseInt(newValue));
+
+            }
 
         }
 
